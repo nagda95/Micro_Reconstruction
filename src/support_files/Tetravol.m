@@ -1,0 +1,11 @@
+function [Vol]=Tetravol(x1,y1,z1,x2,y2,z2,x3,y3,z3,x4,y4,z4)
+xa=x2-x1;
+ya=y2-y1;
+za=z2-z1;
+xb=x3-x1;
+yb=y3-y1;
+zb=z3-z1;
+xc=x4-x1;
+yc=y4-y1;
+zc=z4-z1;
+Vol=abs(dot(cross([xa,ya,za],[xb,yb,zb]),[xc,yc,zc]))/6;
